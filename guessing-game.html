@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDS Vocabulary Guessing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        /* Game Container */
+        .lds-guessing-game {
+            margin: 2em auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 1.5em;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        .clue {
+            font-weight: bold;
+            margin-bottom: 1em;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 0.5em;
+            font-size: 1em;
+            margin-right: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 0.5em 1em;
+            font-size: 1em;
+            color: white;
+            background-color: #6c757d;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #495057;
+        }
+
+        #feedback {
+            margin-top: 1em;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        #feedback.correct {
+            color: #28a745;
+        }
+
+        #feedback.wrong {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <!-- Game Section -->
+    <section class="lds-guessing-game">
+        <h1>LDS Vocabulary Guessing Game</h1>
+        <p>Test your LDS vocabulary! Guess the correct word based on the clue provided.</p>
+
+        <!-- Clue -->
+        <p id="clue" class="clue"></p>
+
+        <!-- Input Field -->
+        <input type="text" id="userGuess" placeholder="Enter your guess">
+        <button onclick="checkGuess()">Submit</button>
+
+        <!-- Feedback -->
+        <p id="feedback"></p>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Array of LDS words and clues
+        const words = [
+            { word: "faith", clue: "It is believing in things unseen." },
+            { word: "temple", clue: "A sacred place for covenants and ordinances." },
+            { word: "atonement", clue: "The Savior's sacrifice to overcome sin and death." },
+            { word: "prayer", clue: "How we communicate with Heavenly Father." },
+            { word: "baptism", clue: "An ordinance symbolizing being born again." }
+        ];
+
+        let currentWordIndex = 0;
+
+        // Load the current clue
+        function loadClue() {
+            document.getElementById("clue").textContent = words[currentWordIndex].clue;
+            document.getElementById("userGuess").value = "";
+            document.getElementById("feedback").textContent = "";
+        }
+
+        // Check the user's guess
+        function checkGuess() {
+            const userInput = document.getElementById("userGuess").value.trim().toLowerCase();
+            const correctWord = words[currentWordIndex].word;
+
+            if (userInput === correctWord) {
+                document.getElementById("feedback").textContent = "Correct!";
+                document.getElementById("feedback").className = "correct";
+
+                setTimeout(() => {
+                    currentWordIndex++;
+                    if (currentWordIndex < words.length) {
+                        loadClue();
+                    } else {
+                        document.getElementById("clue").textContent = "Congratulations! You've completed the game.";
+                        document.getElementById("userGuess").style.display = "none";
+                        document.querySelector("button").style.display = "none";
+                        document.getElementById("feedback").textContent = "";
+                    }
+                }, 1000);
+            } else {
+                document.getElementById("feedback").textContent = "Try again!";
+                document.getElementById("feedback").className = "wrong";
+            }
+        }
+
+        // Initialize the game
+        loadClue();
+    </script>
+</body>
+</html>

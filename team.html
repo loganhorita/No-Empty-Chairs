@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="overlay"><!-- Header with Navigation Menu -->
+         <!-- Header with Navigation Menu -->
+    <header>
+        <div class="menu-bar">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="NEC Images/logo.png" alt="No Empty Chairs Logo" class="logo">
+            </a>
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <nav id="dropdownMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>  
+
+
+    <!-- Main Content -->
+    <main>
+        <h1>Our Team</h1>
+        <p>
+            Our team is made up of devoted individuals who share a passion for faith and family. Each contributor brings unique experiences and perspectives, united by a common goal: to create content that uplifts, inspires, and aligns with gospel principles.
+            From personal reflections on faith journeys to insightful gospel discussions, our contributors strive to help readers make choices that bring lasting joy and strengthen their relationship with Christ.
+        </p>
+        
+        <!-- Team Cards -->
+        <section class="team-grid" style="padding-top: 45px;">
+            <!-- Team Member 1 -->
+            <div class="team-card" onclick="openModal('modal-logan')">
+                <img src="NEC Images/logan-profile.jpg" alt="Logan Horita" class="team-photo">
+                <h2>Logan Horita</h2>
+                <p>Founder, Editor-in-Chief</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card" onclick="openModal('modal-sefia')">
+                <img src="NEC Images/sefia-profile.jpg" alt="Sefia Horita" class="team-photo">
+                <h2>Sefia Horita</h2>
+                <p>Writer, Graphic Designer</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modals -->
+    <div id="modal-logan" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-logan')">&times;</span>
+            <h2>Logan Horita</h2>
+            <p>
+                Logan M.M. Horita is the Founder and Editor-in-Chief of <em>No Empty Chairs</em>, a blog dedicated to fostering faith-centered reflections and encouraging intentional choices in media and life. Rooted in his deep love for the gospel and family, Logan created <em>No Empty Chairs</em> to help others navigate their spiritual journey while keeping their focus on what matters most: their faith, relationships, and eternal perspective.
+            </p>
+            <p>
+                Logan’s commitment to service began as a full-time missionary for The Church of Jesus Christ of Latter-day Saints in the Japan Nagoya Mission and the California Oakland/San Francisco Mission. There, he learned to love sharing the gospel, strengthening communities, and deepening his understanding of God. 
+            </p>
+            <p>
+                In July 2023, Logan married his best friend, Sefia, in the Laie Hawaii Temple, a sacred beginning to their eternal family. Together, they look forward to welcoming their first child in April 2024, a new chapter that fills their hearts with gratitude and anticipation.
+            </p>
+            <p>
+                Through <em>No Empty Chairs</em>, Logan shares reflections on faith, family, and media that align with gospel principles, inviting others to make choices that bring lasting joy and strengthen their connection to God. Whether through the written word or quiet moments with loved ones, Logan believes in the importance of ensuring that no one is left behind and no chair is left empty.
+            </p>
+            <p>
+                To learn more about Logan's background and experience, you can view his 
+                <a href="logan-resume.html" target="_blank" rel="noopener noreferrer">resume here</a>.
+            </p>
+        </div>
+    </div>
+    
+
+    <div id="modal-sefia" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-sefia')">&times;</span>
+            <h2>Sefia Horita</h2>
+            <p>Sefia Horita has been a contributor since the blog's founding. She served as a proselyting missionary in the Japan Sapporo Mission and as a service missionary in the Orem Utah Mission. Like her husband, she too is excited to welcome their first child to the world.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 No Empty Chairs Blog | Created by Logan Horita</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+      <!-- JavaScript -->
+    <script>
+        // Menu Toggle Logic
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Toggle menu visibility
+        menuToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        window.addEventListener('click', function (event) {
+            if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

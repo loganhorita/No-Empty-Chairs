@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="overlay"><!-- Header with Navigation Menu -->
+         <!-- Header with Navigation Menu -->
+    <header>
+        <div class="menu-bar">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="NEC Images/logo.png" alt="No Empty Chairs Logo" class="logo">
+            </a>
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <nav id="dropdownMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>  
+
+
+    <!-- Main Content -->
+    <main>
+        <section class="article">
+            <h2>"That I Might Not...Shrink"</h2>
+            <p class="article-meta">Published on <strong>December 16, 2024</strong> by <em>Logan Horita</em></p>
+            <!-- Article Image -->
+            <img src="NEC Images/D&C 1918.jpg" alt="Doctrine & Covenants 19:18" class="article-image" title="Doctrine & Covenants 19:18">
+            <!-- Article Content -->
+            <p>
+                I’ve often wondered what He thought as He prayed in that lonely garden. Nailed to the cross, did He cry, or was the pain beyond tears?
+            </p>
+            <p>
+                We see glimpses and hear snippets of what He said and how He must have felt from His chosen servants, but rarely does He seem to speak of that miserable experience. Perhaps it’s because, even after a millennium, the memory of that pain still hurts Him.
+            </p>
+            <p>
+                Luke records His plea to His Father: “…if though be willing remove this cup from me” (Luke 22:42). Matthew wrote of His ultimate submission: “nevertheless not as I will, but as thou wilt” (Matthew 26:39). Mark says He was clothed with purple and crowned with thorns (Mark 15:17).
+            </p>
+            <p>
+                There is at least one time, though—one time He speaks of the pain of that cross and bitterness of that cup.
+            </p>
+            <p>
+                In a revelation given to 24-year-old Joseph, our Savior shares, “if they will not repent, they must suffer, which suffering caused myself, even God, the greatest of all to tremble because of pain and to bleed at every pore, and to suffer both body and spirit—and would that I might not drink the bitter cup and shrink—
+            </p>
+            <p>
+                “Nevertheless,” He continues, “glory be to the Father” (Doctrine & Covenants 19:18-19).
+            </p>
+            <p>
+                Recounting that experience, His trembling because of pain, His bleeding at every pore, He seems to be most tender when sharing that last part, that truest desire of His heart. “[I] would that I might not drink the bitter cup and shrink.”
+            </p>
+            <p>
+                You see, it wasn’t that Christ wished not to partake of that cup. Whether He wanted to or not, He had already chosen to do so.
+            </p>
+            <p>
+                No.
+            </p>
+            <p>
+                Instead, His immediate concern appears to be that He would drink that cup and shrink.
+            </p>
+            <p>
+                Prophets and apostles throughout time have shared that same sentiment.
+            </p>
+            <p>
+                Nephi invites us to “prepare [our] souls…that [we] may not shrink with awful fear” (2 Nephi 9:46). Jacob, discussing his disdain for sin, writes, “it grieveth my soul and causeth me to shrink with shame before the presence of my Maker” (Jacob 2:6). King Benjamin teaches of those who would “shrink from the presence of the Lord into a state of misery and endless torment” (Mosiah 3:25). Speaking of them “who live without God in the world,” Alma writes, “they shall quake, and tremble, and shrink” (Mosiah 27:31). Mormon shares about the fear Captain Moroni’s men felt because of the armies of the Lamanites and how “they were about to shrink and flee” (Alma 43:48). In the modern world, Elder Neal A. Maxwell said of his debilitating battle with cancer, “I have learned that not shrinking is more important than surviving.”
+            </p>
+            <p>
+                The challenge, then, which Christ certainly felt and which Elder Maxwell communicated, is “partaking of the bitter cup without becoming bitter.” That seems like an awfully big ask for a nine-year-old boy whose mom was just diagnosed with cancer, for parents whose infant daughter passed in a tragic accident, or for any disciple of Christ who was promised covenantal peace but feels that promise has yet to be fulfilled.
+            </p>
+            <p>
+                Maybe the solution lies, as it so often does, in the example of our Savior Jesus Christ. In that garden and on that cross, trembling from pain and bleeding at every pore, this Son of God looked outward. He consoled His grief-struck mother and comforted those guilty criminals. He gave John a special charge and appealed to His Father on behalf of those scourgers.
+            </p>
+            <p>
+                I’ve often wondered what He thought as He prayed in that lonely garden and hung on that dreadful cross. Perhaps He thought about you.
+            </p>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 No Empty Chairs Blog | Created by Logan Horita</p>
+    </footer>
+      <!-- JavaScript -->
+      <script>
+        // Menu Toggle Logic
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Toggle menu visibility
+        menuToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        window.addEventListener('click', function (event) {
+            if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

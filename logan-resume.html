@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan Horita - Resume</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="overlay"><!-- Header with Navigation Menu -->
+         <!-- Header with Navigation Menu -->
+    <header>
+        <div class="menu-bar">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="NEC Images/logo.png" alt="No Empty Chairs Logo" class="logo">
+            </a>
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <nav id="dropdownMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>  
+
+
+    <!-- Main Content -->
+    <main>
+        <section class="resume">
+            <h1>Logan M.M. Horita</h1>
+            <p>
+                <a href="https://www.linkedin.com/in/logan-horita" target="_blank">LinkedIn Profile</a> |
+                (808) 971-1940 | loganhorita10@gmail.com
+            </p>
+
+            <!-- Education -->
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Brigham Young University — Marriott School of Business</strong> | Provo, UT<br>
+                    Bachelor of Science in Accounting, GPA: 3.83/4.00 (Sep 2024 - Present)
+                </li>
+                <li>
+                    <strong>`Iolani School</strong> | Honolulu, HI<br>
+                    High School Diploma, GPA: 4.00 (Aug 2014 - Jun 2021)
+                </li>
+            </ul>
+
+            <!-- Experience -->
+            <h2>Experience</h2>
+            <ol>
+                <li>
+                    <strong>Language Instructor & Teacher Mentor</strong><br>
+                    <em>The Church of Jesus Christ of Latter-day Saints, Missionary Training Center | Provo, UT</em><br>
+                    - Taught Japanese language and culture to volunteers, focusing on listening, speaking, reading, and writing skills.<br>
+                    - Mentored students in developing effective communication skills in immersive language environments.<br>
+                    - Collaborated with other instructors to improve teaching methodologies and ensure a high standard of instruction.
+                </li>
+                <li>
+                    <strong>Project Intern</strong><br>
+                    <em>Etherios Therapy | Provo, UT</em><br>
+                    - Organized project timelines, set clear goals, and ensured alignment across other teams.<br>
+                    - Led and collaborated with a cross-functional team of five.<br>
+                    - Created and implemented marketing strategy increasing online following by 700+ in 3 months.
+                </li>
+                <li>
+                    <strong>Office Assistant</strong><br>
+                    <em>Horita Realty | Aiea, HI</em><br>
+                    - Provided administrative support, including managing calendars, scheduling meetings, and handling correspondence.<br>
+                    - Organized and maintained office filing systems, ensuring accurate record-keeping and document retrieval.<br>
+                    - Advised team members with various tasks, improving overall office efficiency.
+                </li>
+            </ol>
+
+            <!-- Leadership & Service -->
+            <h2>Leadership & Service</h2>
+            <ol>
+                <li>
+                    <strong>Volunteer Representative</strong><br>
+                    <em>The Church of Jesus Christ of Latter-day Saints | San Francisco, CA & Nagoya, Japan</em><br>
+                    - Traveled internationally as a volunteer, executing service projects within 80+ hour work weeks.<br>
+                    - Monitored church financial expenditures and planned weekly services for 100+ people.<br>
+                    - Trained teams of 50+ volunteers in project management, social media marketing, communication, and work efficiency.
+                </li>
+                <li>
+                    <strong>Student Body President / Proconsul</strong><br>
+                    <em>`Iolani School, Student Activities Office | Honolulu, HI</em><br>
+                    - Created, planned, and executed events for 2200+ students safely during the COVID-19 epidemic.<br>
+                    - Established on-campus COVID-19 prevention protocols consistent with local and federal guidelines.
+                </li>
+                <li>
+                    <strong>Iolani Fair Executive Chair</strong><br>
+                    <em>`Iolani School, Advancement Office | Honolulu, HI</em><br>
+                    - Managed and instructed 500+ volunteers and coordinated 3000+ volunteer shifts.<br>
+                    - Corresponded with and managed an executive team of 12 members to coordinate projects like news publicity and social media marketing.
+                </li>
+            </ol>
+
+            <!-- Awards, Skills & Interests -->
+            <h2>Awards, Skills & Interests</h2>
+            <ul>
+                <li>Japanese: Intermediate Proficiency</li>
+                <li>Eagle Scout, Boy Scouts of America</li>
+                <li>Headmaster's Award, `Iolani School</li>
+                <li>Experience with Adobe Creative Cloud, Outlook, Microsoft Office, Excel, VBA, Tableau, and SQL</li>
+                <li>Public Speaking and Writing</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 No Empty Chairs Blog | Created by Logan Horita</p>
+    </footer>
+      <!-- JavaScript -->
+      <script>
+        // Menu Toggle Logic
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Toggle menu visibility
+        menuToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        window.addEventListener('click', function (event) {
+            if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

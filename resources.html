@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Glacial+Indifference:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="overlay"><!-- Header with Navigation Menu -->
+         <!-- Header with Navigation Menu -->
+    <header>
+        <div class="menu-bar">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="NEC Images/logo.png" alt="No Empty Chairs Logo" class="logo">
+            </a>
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <nav id="dropdownMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>  
+
+
+    <!-- Main Content -->
+    <main>
+        <h1>Resources</h1>
+        <p>Welcome to the Resources page! Below you'll find helpful links, recommended books, and tools to guide you on your Christ-centered study.</p>
+        
+        <section>
+            <h2>Interactive Vocabulary Game</h2>
+            <p>Test your knowledge of LDS vocabulary terms!
+            <a href="guessing-game.html" target="_blank" class="game-link">Play the Game</a>
+        </section>
+            </p>
+        
+<!-- Embedded Tableau Visualization -->
+        <h2>Interactive Tableau Dashboard</h2>
+        <div class='tableauPlaceholder' id='viz1734459126270' style='position: relative; margin: 0 auto;'>
+            <noscript>
+                <a href='#'>
+                    <img alt='LDS Key Performance Indicators' 
+                        src='https://public.tableau.com/static/images/LD/LDSChurchStatistics/KPIDashboard/1_rss.png' 
+                        style='border: none; width: 100%; max-width: 800px;' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='LDSChurchStatistics&#47;KPIDashboard' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/LD/LDSChurchStatistics/KPIDashboard/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+            </object>
+        </div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1734459126270');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width = '100%';
+            vizElement.style.maxWidth = '800px';
+            vizElement.style.height = '827px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+
+        <!-- Section: Articles -->
+        <section>
+            <h2>Our Favorite Talks</h2>
+            <ul>
+                <li><a href="https://www.churchofjesuschrist.org/study/ensign/2007/09/seek-learning-by-faith?lang=eng" target="_blank">Seek Learning By Faith</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/ensign/2001/03/missionary-work-and-the-atonement?lang=eng" target="_blank">Missionary Work and the Atonement</a></li>
+                <li><a href="https://speeches.byu.edu/talks/jeffrey-r-holland/cast-not-away-therefore-your-confidence/" target="_blank">"Cast Not Away Therefore Your Confidence"</a></li>
+            </ul>
+        </section>
+
+        <!-- Section: Recommended Books -->
+        <section>
+            <h2>Recommended Books</h2>
+            <ul>
+                <li><em>Jesus the Christ</em> by James E. Talmage</li>
+                <li><em>The Infinite Atonement</em> by Tad R. Callister</li>
+                <li><em>The Book of Mormon</em></li>
+            </ul>
+        </section>
+
+        <!-- Section: Media Tools -->
+        <section>
+            <h2>Media Tools</h2>
+            <ul>
+                <li><a href="https://www.vidangel.com" target="_blank">VidAngel</a> – Clean streaming options for your family.</li>
+                <li><a href="https://www.pluggedin.com" target="_blank">Plugged In</a> – Movie and media reviews with family-friendly insights.</li>
+                <li><a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank">Gospel Library</a> – Study and sharing tools from The Church of Jesus Christ of Latter-day Saints.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 No Empty Chairs Blog | Created by Logan Horita</p>
+    </footer>
+      <!-- JavaScript -->
+      <script>
+        // Menu Toggle Logic
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Toggle menu visibility
+        menuToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        window.addEventListener('click', function (event) {
+            if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
